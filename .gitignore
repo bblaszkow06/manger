@@ -1,3 +1,6 @@
+# Exclude escript
+/manger
+
 /_build
 /cover
 /deps
