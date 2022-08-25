@@ -8,6 +8,9 @@ defmodule Manger do
     at: "/",
     from: {__MODULE__, :get_dir_at_runtime, []}
 
+  plug Manger.DirListing,
+    relative_to: {__MODULE__, :get_dir_at_runtime, []}
+
   plug :not_found
 
   def not_found(conn, _args) do
